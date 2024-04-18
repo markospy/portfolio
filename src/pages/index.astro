@@ -1,0 +1,40 @@
+---
+import Personal from '../components/PersonalCard.astro'
+import Skill from '../components/Skill.astro'
+import Resume from '../components/Resume.astro'
+import Works from '../components/Works.astro'
+import ProyectsList from '../components/ProyectsList.astro'
+import Footer from '../components/Footer.astro'
+import Gallery from '../components/Gallery.astro'
+import NavBar from '../components/NavBar.astro'
+import Formacion from '../components/Formacion.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio</title>
+	</head>
+	<body class="font-poppins flex flex-col items-center gap-8 w-full bg-[#f7f7f7]">
+		<NavBar />
+		<div class="flex flex-col items-center gap-8 w-11/12 lg:flex-row lg:items-start md:w-8/12">
+			<section class="flex justify-center lg:sticky lg:top-24">
+				<Personal />
+			</section>
+			<div class="flex flex-col items-center gap-8 mt-8 md:mt-2 w-full">
+				<Resume />
+				<Skill />
+				<Works />
+				<ProyectsList />
+				<Formacion />
+			</div>
+		</div>
+		<footer class="w-full flex flex-col items-center gap-16">
+			<Gallery />
+			<Footer />
+		</footer>
+	</body>
+</html>

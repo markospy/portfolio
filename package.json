@@ -1,0 +1,20 @@
+{
+  "name": "personal_portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^5.2.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.16",
+    "photoswipe": "^5.4.3",
+    "swiper": "^11.1.1",
+    "tailwindcss": "^3.4.3"
+  }
+}
