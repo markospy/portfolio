@@ -11,6 +11,8 @@ interface Props {
     tech_5?: string;
 }
 
+//Too many props, is better an array for tech
+
 
 const {titulo, descripcion, url, imagen, tech_1=null, tech_2=null, tech_3=null, tech_4=null, tech_5=null} = Astro.props;
 ---
@@ -24,6 +26,7 @@ const {titulo, descripcion, url, imagen, tech_1=null, tech_2=null, tech_3=null, 
 	<div class="flex flex-col gap-4 md:w-7/12 md:pt-3">
 		<p class="text-sm leading-relaxed">{descripcion}</p>
 		<ul class="flex flex-wrap gap-4 justify-between  text-sm text-gray-400">
+			<!-- Then if tech is an array here you can map over it -->
 			{tech_1 && <li class="text-center min-w-fit px-2 bg-green-100 rounded-md">{tech_1}</li>}
 			{tech_2 && <li class="text-center min-w-fit px-2 bg-green-100 rounded-md">{tech_2}</li>}
 			{tech_3 && <li class="text-center min-w-fit px-2 bg-green-100 rounded-md">{tech_3}</li>}

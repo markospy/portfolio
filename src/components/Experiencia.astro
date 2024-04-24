@@ -7,6 +7,9 @@ interface Props {
 	fecha?:string;
 }
 
+//Why you use default props? 
+//Why not just pass all as props, doesn't make sense to me those default props
+
 const { puesto, empresa='Freelancing', ubicacion='Remoto', tiempo='A tiempo completo', fecha} = Astro.props;
 ---
 

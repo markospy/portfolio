@@ -1,43 +1,90 @@
 ---
-import Feacture  from "./Feacture.astro";
+import Feacture from './Feacture.astro';
 ---
 
-<div class="flex flex-col items-center w-10/12 mt-2">
-	<div class="flex flex-col items-center gap-4">
-		<h1 class="text-center text-2xl font-bold w-40">Full Stack Developer</h1>
-		<img class="w-32 h-32 rounded-full shadow-xl" src="imagenes/avatar.jpg" alt="foto de marcos antonio avila morales">
-		<p class="text-center font-semibold">Marcos Antonio Avila Morales</p>
-	</div>
-	<div>
-		<ul class="m-6">
-			<li class="shadow-buttom"><Feacture>
-				<div class="flex gap-4">
-					<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-					</svg>
-					<a href="mailto:marco.developer@outlook.com">marco.developer@outlook.com</a>
-				</div>
-			</Feacture></li>
-			<li class="shadow-buttom"><Feacture>
-				<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-				</svg>
-				<p>Cienfuegos, Cuba</p>
-			</Feacture></li>
-			<li><Feacture>
-				<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
-				</svg>
-				<div class="idiomas">
-						<p>Español nativo <span class="text-gray-400">-</span> Inglés A2</p>
-				</div>
-			</Feacture></li>
-		</ul>
-	</div>
-	<button class="font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-md h-10 w-10/12 max-w-xs">
-		<a href="./cv/Curriculum-Marcos Antonio Avila Morales.pdf" target="_blank">
-			Descargar CV
-		</a>
-	</button>
+<div class='flex flex-col items-center w-10/12 mt-2'>
+  <div class='flex flex-col items-center gap-4'>
+    <h1 class='text-center text-2xl font-bold w-40'>Full Stack Developer</h1>
+    <img
+      class='w-32 h-32 rounded-full shadow-xl'
+      src='imagenes/avatar.jpg'
+      alt='foto de marcos antonio avila morales'
+    />
+    <p class='text-center font-semibold'>Marcos Antonio Avila Morales</p>
+  </div>
+  <div>
+    <ul class='m-6'>
+      <li class='shadow-buttom'>
+        <Feacture>
+          <div class='flex gap-4'>
+            <svg
+              class='w-5 h-5'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
+              ></path>
+            </svg>
+            <a href='mailto:marco.developer@outlook.com'
+              >marco.developer@outlook.com</a
+            >
+          </div>
+        </Feacture>
+      </li>
+      <li class='shadow-buttom'>
+        <Feacture>
+          <svg
+            class='w-5 h-5'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+          >
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'></path>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z'
+            ></path>
+          </svg>
+          <p>Cienfuegos, Cuba</p>
+        </Feacture>
+      </li>
+      <li>
+        <Feacture>
+          <svg
+            class='w-5 h-5'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+          >
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802'
+            ></path>
+          </svg>
+          <div class='idiomas'>
+            <p>Español nativo <span class='text-gray-400'>-</span> Inglés A2</p>
+          </div>
+        </Feacture>
+      </li>
+    </ul>
+  </div>
+  <button
+    class='font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-md h-10 w-10/12 max-w-xs'
+  >
+    <a href='./cv/Curriculum-Marcos Antonio Avila Morales.pdf' target='_blank'>
+      Descargar CV
+    </a>
+  </button>
 </div>
