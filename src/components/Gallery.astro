@@ -1,223 +1,137 @@
-<!-- Contenedor principal de Swiper -->
-<div class="swiper w-full flex">
-	<!-- Wrapper adicional requerido -->
-	<div class="swiper-wrapper px-8" id="my-slider">
-		<!-- Los slides -->
-		<a
-			class="swiper-slide"
-			href="/certificados/algoritmos_diagramadeflujo.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/algoritmos_diagramadeflujo.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/fundamentos_python.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/fundamentos_python.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/lenguajes_programacion.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/lenguajes_programacion.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/funciones_estructuras_control.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/funciones_estructuras_control.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/analizy_data.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/analizy_data.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/basesdedatos_modularizacion_deploy.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/basesdedatos_modularizacion_deploy.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/data_science_method.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/data_science_method.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/diploma-bd.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/diploma-bd.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/fastapi.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/fastapi.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/Introduction_to_data_science.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/Introduction_to_data_science.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/matematicas_data_science.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/matematicas_data_science.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/python_avanzado.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/python_avanzado.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/sql_mysql.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/sql_mysql.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/terminal.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/terminal.png" alt="" />
-		</a>
-		<a
-			class="swiper-slide"
-			href="/certificados/visualizing_data.png"
-			data-pswp-width="800" data-pswp-height="800"
-			target="_blank"
-			data-cropped="true"
-		>
-			<img src="/certificados/visualizing_data.png" alt="" />
-		</a>
+  <div class="carousel w-full">
+	<div id="slide1" class="carousel-item relative w-full">
+	  <img
+		src="./certificados/algoritmos_diagramadeflujo.png"
+		class="w-full" />
+	  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		<a href="#slide15" class="btn btn-circle">❮</a>
+		<a href="#slide2" class="btn btn-circle">❯</a>
+	  </div>
 	</div>
-  <!-- Botones de navegación -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
-
-<script>
-	// Core de Swiper y estilos
-	import Swiper from 'swiper';
-	import 'swiper/css';
-	// Módulo Navigation de Swiper y estilos
-	import { Navigation } from "swiper/modules";
-	import "swiper/css/navigation";
-
-	// Configurar Swiper
-	const swiper = new Swiper(".swiper", {
-		modules: [Navigation],
-		loop: false,
-		slidesPerView: "auto",
-		spaceBetween: 10,
-		breakpoints: {
-			// Cuando la pantalla es >= 768px
-			780: {
-				slidesPerView: 3,
-				spaceBetween: 10
-			},
-			// Cuando la pantalla es >= 1024px
-			1024: {
-				slidesPerView: 4,
-				spaceBetween: 10
-			}
-		},
-		navigation: {
-			prevEl: ".swiper-button-prev",
-			nextEl: ".swiper-button-next",
-		}
-	});
-
-	// Photoswipe y estilos
-	import PhotoSwipeLightbox from 'photoswipe/lightbox';
-	import 'photoswipe/style.css';
-
-	// Configurar e inicializar Photoswipe
-	const lightbox = new PhotoSwipeLightbox({
-		gallery: '#my-slider',
-		children: 'a',
-		pswpModule: () => import('photoswipe')
-	});
-	lightbox.init();
-</script>
-
-<style>
-  .swiper-slide {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .swiper-slide img {
-    height: 200px;
-		width: auto;
-    object-fit: contain;
-  }
-
-	@media(max-width: 768px) {
-		.swiper-slide {
-			width: 70%; /* Útil si la propiedad slidesPerView es "auto" */
-			height: 200px;
-		}
-		.swiper-button-prev,
-		.swiper-button-next {
-			display: none;
-		}
-	}
-
-	.swiper-button-next,
-	.swiper-button-prev {
-		background-color: white;
-		width: 60px;
-		height: 60px;
-		border-radius: 10px;
-	}
-</style>
+	<div id="slide2" class="carousel-item relative w-full">
+	  <img
+	  	src="./certificados/analizy_data.png"
+		class="w-full" />
+	  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		<a href="#slide1" class="btn btn-circle">❮</a>
+		<a href="#slide3" class="btn btn-circle">❯</a>
+	  </div>
+	</div>
+	<div id="slide3" class="carousel-item relative w-full">
+	  <img
+	  	src="./certificados/basesdedatos_modularizacion_deploy.png"
+		class="w-full" />
+	  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		<a href="#slide2" class="btn btn-circle">❮</a>
+		<a href="#slide4" class="btn btn-circle">❯</a>
+	  </div>
+	</div>
+	<div id="slide4" class="carousel-item relative w-full">
+	  <img
+	  	src="./certificados/data_science_method.png"
+		class="w-full" />
+	  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		<a href="#slide3" class="btn btn-circle">❮</a>
+		<a href="#slide5" class="btn btn-circle">❯</a>
+	  </div>
+	</div>
+	<div id="slide5" class="carousel-item relative w-full">
+		<img
+			src="./certificados/diploma-bd.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide4" class="btn btn-circle">❮</a>
+		  <a href="#slide6" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide6" class="carousel-item relative w-full">
+		<img
+			src="./certificados/fastapi.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide5" class="btn btn-circle">❮</a>
+		  <a href="#slide7" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide7" class="carousel-item relative w-full">
+		<img
+			src="./certificados/funciones_estructuras_control.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide6" class="btn btn-circle">❮</a>
+		  <a href="#slide8" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide8" class="carousel-item relative w-full">
+		<img
+			src="./certificados/fundamentos_python.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide7" class="btn btn-circle">❮</a>
+		  <a href="#slide9" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide9" class="carousel-item relative w-full">
+		<img
+			src="./certificados/Introduction_to_data_science.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide8" class="btn btn-circle">❮</a>
+		  <a href="#slide10" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide10" class="carousel-item relative w-full">
+		<img
+			src="./certificados/lenguajes_programacion.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide9" class="btn btn-circle">❮</a>
+		  <a href="#slide11" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide11" class="carousel-item relative w-full">
+		<img
+			src="./certificados/matematicas_data_science.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide10" class="btn btn-circle">❮</a>
+		  <a href="#slide12" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide12" class="carousel-item relative w-full">
+		<img
+			src="./certificados/python_avanzado.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide11" class="btn btn-circle">❮</a>
+		  <a href="#slide13" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide13" class="carousel-item relative w-full">
+		<img
+			src="./certificados/sql_mysql.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide12" class="btn btn-circle">❮</a>
+		  <a href="#slide14" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide14" class="carousel-item relative w-full">
+		<img
+			src="./certificados/terminal.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide15" class="btn btn-circle">❮</a>
+		  <a href="#slide13" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+	  <div id="slide15" class="carousel-item relative w-full">
+		<img
+			src="./certificados/visualizing_data.png"
+		  class="w-full" />
+		<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+		  <a href="#slide14" class="btn btn-circle">❮</a>
+		  <a href="#slide2" class="btn btn-circle">❯</a>
+		</div>
+	  </div>
+  </div>
