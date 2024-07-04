@@ -14,6 +14,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.5.16",
     "photoswipe": "^5.4.3",
+    "pnpm": "^9.4.0",
     "swiper": "^11.1.1",
     "tailwindcss": "^3.4.3"
   }

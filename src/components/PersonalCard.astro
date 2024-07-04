@@ -1,37 +1,30 @@
 ---
 import Feacture from './Feacture.astro';
+
+const { job, full_name, email, place, languages} = Astro.props;
 ---
 
 <div class='flex flex-col items-center w-10/12 mt-2'>
   <div class='flex flex-col items-center gap-4'>
-    <h1 class='text-center text-2xl font-bold w-40'>Full Stack Developer</h1>
+    <h1 class='text-center text-2xl font-bold w-40'>{job}</h1>
     <img
       class='w-32 h-32 rounded-full shadow-xl'
       src='imagenes/avatar.jpg'
-      alt='foto de marcos antonio avila morales'
+      alt=`foto de ${full_name}`
     />
-    <p class='text-center font-semibold'>Marcos Antonio Avila Morales</p>
+    <p class='text-center font-semibold'>{full_name}</p>
   </div>
   <div>
     <ul class='m-6'>
       <li class='shadow-buttom'>
         <Feacture>
           <div class='flex gap-4'>
-            <svg
-              class='w-5 h-5'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke-width='1.5'
-              stroke='currentColor'
-            >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
+            <svg class='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>
+              <path stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
               ></path>
-            </svg>
-            <a href='mailto:marco.developer@outlook.com'
-              >marco.developer@outlook.com</a
+          </svg>
+            <a href=`mailto:${email}`
+              >{email}</a
             >
           </div>
         </Feacture>
@@ -55,7 +48,7 @@ import Feacture from './Feacture.astro';
               d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z'
             ></path>
           </svg>
-          <p>Cienfuegos, Cuba</p>
+          <p>{place}</p>
         </Feacture>
       </li>
       <li>
@@ -74,7 +67,9 @@ import Feacture from './Feacture.astro';
             ></path>
           </svg>
           <div class='idiomas'>
-            <p>Español nativo <span class='text-gray-400'>-</span> Inglés A2</p>
+            <p>
+              {Object.entries(languages).map(([lang, { name, level }]) => `${name} ${level}`).join(' - ')}
+            </p>
           </div>
         </Feacture>
       </li>

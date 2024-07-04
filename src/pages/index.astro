@@ -3,12 +3,24 @@ import Footer from '../components/Footer.astro';
 import Formacion from '../components/Formacion.astro';
 import Gallery from '../components/Gallery.astro';
 import NavBar from '../components/NavBar.astro';
-import Personal from '../components/PersonalCard.astro';
+import PersonalCard from '../components/PersonalCard.astro';
 import ProyectsList from '../components/ProyectsList.astro';
 import Resume from '../components/Resume.astro';
 import Skill from '../components/Skill.astro';
 import Works from '../components/Works.astro';
 //Use astro-seo for SEO purposes
+
+const lang = {
+  en: {
+    name: 'English',
+    level: 'A2',
+  },
+  es: {
+    name: 'Español',
+    level: 'nativo',
+  },
+};
+
 ---
 
 <html lang='en'>
@@ -27,7 +39,12 @@ import Works from '../components/Works.astro';
       class='flex flex-col items-center gap-8 w-11/12 lg:flex-row lg:items-start md:w-8/12'
     >
       <section class='flex justify-center lg:sticky lg:top-24'>
-        <Personal />
+        <PersonalCard
+          job="Full Stack Developer"
+          email="marco.developer@outlook.com"
+          place="Cienfuegos, Cuba"
+          languages={lang}
+        />
       </section>
       <div class='flex flex-col items-center gap-8 mt-8 md:mt-2 w-full'>
         <Resume />
