@@ -1,6 +1,17 @@
 ---
 import Feacture from './Feacture.astro';
 
+interface Props {
+  job?: string;
+  full_name?: string;
+  email?: string;
+  place?: string;
+  languages?: {
+    name: string;
+    level: string;
+  }[];
+};
+
 const { job, full_name, email, place, languages} = Astro.props;
 ---
 
@@ -18,7 +29,7 @@ const { job, full_name, email, place, languages} = Astro.props;
     <ul class='m-6'>
       <li class='shadow-buttom'>
         <Feacture>
-          <div class='flex gap-4'>
+          <div class='h-12 flex gap-4 items-center'>
             <svg class='w-5 h-5 svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>
               <path stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
               ></path>
@@ -31,28 +42,31 @@ const { job, full_name, email, place, languages} = Astro.props;
       </li>
       <li class='shadow-buttom'>
         <Feacture>
-          <svg
-            class='w-5 h-5'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'></path>
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z'
-            ></path>
-          </svg>
-          <p>{place}</p>
+          <div class='h-12 flex gap-4 items-center'>
+            <svg
+                class='w-5 h-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke-width='1.5'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  d='M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'></path>
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z'
+                ></path>
+              </svg>
+              <p>{place}</p>
+            </div>
         </Feacture>
       </li>
       <li>
         <Feacture>
+          <div class='h-12 flex gap-4 items-center'>
           <svg
             class='w-5 h-5'
             fill='none'
@@ -68,7 +82,7 @@ const { job, full_name, email, place, languages} = Astro.props;
           </svg>
           <div class='idiomas'>
             <p>
-              {Object.entries(languages).map(([lang, { name, level }]) => `${name} ${level}`).join(' - ')}
+              {languages.map(({ name, level }) => `${name} ${level}`).join(' - ')}
             </p>
           </div>
         </Feacture>
