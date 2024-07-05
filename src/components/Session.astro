@@ -1,0 +1,8 @@
+---
+const { nombre, id } = Astro.props;
+---
+
+<div id={id} class='flex flex-col items-center gap-6 shadow-md rounded-md w-full py-4 bg-white'>
+    <h2 class='font-semibold'>{nombre}</h2>
+    <slot />
+</div>

@@ -1,4 +1,6 @@
 ---
+import Session from './Session.astro';
+import '../styles/global.css';
 import Feacture from './Feacture.astro';
 import Python from './svgs_components/Python.astro';
 import Javascript from './svgs_components/Javascript.astro';
@@ -19,11 +21,8 @@ import AstroI from './svgs_components/AstroI.astro';
 import Tailwind from './svgs_components/Tailwind.astro';
 ---
 
-<div
-  class='flex flex-col items-center shadow-md rounded-md w-full py-4 bg-white'
-  id='habilidades'
->
-  <h2 class='mb-8 font-semibold'>Habilidades técnicas</h2>
+
+<Session id="habilidades" nombre="Habilidades técnicas">
   <ul class='flex flex-col w-full p-2 px-4 rounded-md text-sm'>
     <li class='mb-3 text-gray-600 py-2 flex flex-col justify-center'>
       <Feacture>
@@ -88,4 +87,4 @@ import Tailwind from './svgs_components/Tailwind.astro';
       </Feacture>
     </li>
   </ul>
-</div>
+</Session>

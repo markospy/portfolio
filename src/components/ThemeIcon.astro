@@ -35,6 +35,8 @@
 </style>
 
 <script is:inline>
+    const luzElements = document.querySelectorAll('luz');
+
     const theme = (() => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
             return localStorage.getItem("theme");

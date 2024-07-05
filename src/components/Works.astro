@@ -1,18 +1,21 @@
 ---
+import Session from './Session.astro';
 import Experiencia from './Experiencia.astro';
 ---
 
-<div
-  class='flex flex-col items-center gap-6 shadow-md rounded-md w-full py-4 bg-white'
-  id='experiencia'
->
-  <h2 class='mb-4 font-semibold'>Experiencia laboral</h2>
-  <Experiencia
-    puesto='Desarrollador de sistemas de trading algorítmico. Este trabajo puso a prueba mi lógica y mejoró mucho mi capacidad resolutiva.'
-    fecha='feb/2023 - jul/2023'
-  />
-  <Experiencia
-    puesto='He trabajado en varios proyectos pequeños. Los cuales me han servido para poner en práctica conocmiento recién apredido. He colaborado con otros programadores.'
-    fecha='jul/2023 - presente'
-  />
-</div>
+<Session id="experiencia" nombre="Experiencia laboral">
+    <Experiencia
+      puesto='Desarrollador de sistemas de trading algorítmico. Este trabajo puso a prueba mi lógica y mejoró mucho mi capacidad resolutiva.'
+      fecha='feb/2023 - jul/2023'
+      ubicacion='Remoto'
+      tiempo='A tiempo completo'
+      empresa='Freelancing'
+    />
+    <Experiencia
+      puesto='He trabajado en varios proyectos pequeños. Los cuales me han servido para poner en práctica conocmiento recién apredido. He colaborado con otros programadores.'
+      fecha='jul/2023 - presente'
+      ubicacion='Remoto'
+      tiempo='A tiempo completo'
+      empresa='Freelancing'
+    />
+<Session />
