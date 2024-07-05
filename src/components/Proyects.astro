@@ -7,7 +7,7 @@ const {titulo, descripcion, url, repo_url, imagen, techs} = Astro.props;
 
 <div class="flex flex-col w-full p-2 px-4 gap-4 rounded-md md:flex-row">
 	<div class="md:w-5/12">
-			<h2 class="font-medium text-sm md:text-center"><strong>{titulo}</strong></h2>
+			<h3 class="font-bold text-sm md:text-center">{titulo}</h3>
 			<img class="w-full rounded-md" src={imagen} alt=`imagen del proyecto ${imagen}`>
 	</div>
 	<div class="flex flex-col gap-4 md:w-7/12 md:pt-3">
