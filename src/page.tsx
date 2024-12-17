@@ -27,6 +27,14 @@ import BeautifulSoupLogo from "./components/logos/BeautifulSoupLogo"
 import PytestLogo from "./components/logos/PytestLogo"
 import JupyterLogo from "./components/logos/JupyterLogo"
 import LinuxLogo from "./components/logos/LinuxLogo"
+import SqlModelLogo from "./components/logos/SqlModelLogo"
+import PydanticLogo from "./components/logos/PydanticLogo"
+import RedisLogo from "./components/logos/RedisLogo"
+import FirebaseLogo from "./components/logos/FirebaseLogo"
+import ProjectsSection from "./components/seccions/Proyect"
+import { projects } from "./data/data"
+
+
 
 
 export default function PortfolioPage() {
@@ -109,34 +117,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Projects Section */}
-        <section id="proyectos" className="py-20 bg-muted">
-          <div className="container">
-            <h2 className="text-3xl font-bold mb-8 text-center text-primary">Mis Proyectos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((project) => (
-                <Card key={project} className="bg-card shadow-lg hover:shadow-xl transition-shadow">
-                  <CardHeader className="p-0">
-                    <img
-                      src={`/placeholder.svg?height=200&width=400&text=Proyecto+${project}`}
-                      alt={`Proyecto ${project}`}
-                      width={400}
-                      height={200}
-                      className="rounded-t-lg"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-2 text-primary">Nombre del Proyecto {project}</CardTitle>
-                    <p className="text-sm text-muted-foreground mb-2">React, Node.js, MongoDB</p>
-                    <p className="mb-4 text-muted-foreground">Breve descripción del proyecto y sus características principales.</p>
-                    <Button variant="outline" className="w-full text-primary border-primary hover:bg-primary/10">
-                      <Github className="mr-2 h-4 w-4" /> Ver en GitHub
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection projects={projects}/>
 
         {/* Skills Section */}
         <section id="habilidades" className="py-20">
@@ -160,7 +141,9 @@ export default function PortfolioPage() {
                   skills: [
                     { name: 'Python', logo: <PythonLogo className="w-6 h-6" /> },
                     { name: 'FastAPI', logo: <FastApiLogo className="w-6 h-6" /> },
-                    { name: 'SQLAlchemy', logo: <SQLAlchemyLogo className="w-12 h-12money" /> },
+                    { name: 'SQLAlchemy', logo: <SQLAlchemyLogo className="w-12 h-12" /> },
+                    { name: 'SqlModel', logo: <SqlModelLogo className="w-6 h-6" /> },
+                    { name: 'Pydantic', logo: <PydanticLogo className="w-6 h-6" /> },
                     { name: 'Pytest', logo: <PytestLogo className="w-6 h-6" /> },
                   ]
                 },
@@ -174,7 +157,7 @@ export default function PortfolioPage() {
                   ]
                 },
                 {
-                  title: 'Bases de datos',
+                  title: 'Databases',
                   skills: [
                     { name: 'SQL', logo: <SQLLogo className="w-6 h-6" /> },
                     { name: 'MySQL', logo: <MysqlLogo className="w-6 h-6" /> },
@@ -183,11 +166,19 @@ export default function PortfolioPage() {
                   ]
                 },
                 {
-                  title: 'Web Scraping',
+                  title: 'Web Scraping and Data',
                   skills: [
                     { name: 'Selenium', logo: <SeleniumLogo className="w-6 h-6" /> },
                     { name: 'BeautifulSoup', logo: <BeautifulSoupLogo className="w-6 h-6" /> },
                     { name: 'Jupyter', logo: <JupyterLogo className="w-6 h-6" /> },
+                  ]
+                },
+                {
+                  title: 'What am I studying?',
+                  skills: [
+                    { name: 'Redis', logo: <RedisLogo className="w-6 h-6" /> },
+                    { name: 'Firebase', logo: <FirebaseLogo className="w-6 h-6" /> },
+                    { name: 'LangChain', logo: <FirebaseLogo className="w-6 h-6" /> },
                   ]
                 },
               ].map((category) => (
@@ -197,10 +188,10 @@ export default function PortfolioPage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                      {category.skills.map((skill) => (
-                        <li key={skill.name} className="flex items-center space-x-2">
-                          {skill.logo}
-                          <span>{skill.name}</span>
+                      {category.skills?.map((skill) => (
+                        <li key={skill?.name} className="flex items-center space-x-2">
+                          {skill?.logo}
+                          <span>{skill?.name}</span>
                         </li>
                       ))}
                     </ul>
