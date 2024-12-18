@@ -34,3 +34,10 @@ export const projects: Proyecto[] = [
         demoUrl: "https://usuario.github.io/aplicacion-clima"
     }
 ];
+
+export const heroData = {
+    name: "Marcos Antonio Avila Morales",
+    title: "Full Stack Developer | Python y JavaScript",
+    description: "I love creating solutions with code.",
+    github: "https://github.com/markospy"
+  };
