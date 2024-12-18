@@ -4,43 +4,19 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Github, Linkedin } from 'lucide-react'
 
-// Importamos solo el logo de React
-import ReactLogo from '@/components/logos/ReactLogo'
-import TypeScriptLogo from "./components/logos/TypeScript"
-import HTML5Logo from "./components/logos/HtmlLogo"
-import JavaScriptLogo from "./components/logos/JavaScriptLogo"
-import TailwindCSSLogo from "./components/logos/TailwindLogo"
-import CssLogo from "./components/logos/CssLogo"
-import PythonLogo from "./components/logos/PythonLogo"
-import FastApiLogo from "./components/logos/FastApiLogo"
-import SQLAlchemyLogo from "./components/logos/SQLAlchemyLogo"
-import DockerLogo from "./components/logos/DockerLogo"
-import GitLogo from "./components/logos/GitLogo"
-import GithubLogo from "./components/logos/GithubLogo"
-import SQLLogo from "./components/logos/SQLLogo"
-import MysqlLogo from "./components/logos/MysqlLogo"
-import PostgresqlLogo from "./components/logos/PostgresqlLogo"
-import MongodbLogo from "./components/logos/MongodbLogo"
-import SeleniumLogo from "./components/logos/SeleniumLogo"
-import BeautifulSoupLogo from "./components/logos/BeautifulSoupLogo"
-import PytestLogo from "./components/logos/PytestLogo"
-import JupyterLogo from "./components/logos/JupyterLogo"
-import LinuxLogo from "./components/logos/LinuxLogo"
-import SqlModelLogo from "./components/logos/SqlModelLogo"
-import PydanticLogo from "./components/logos/PydanticLogo"
-import RedisLogo from "./components/logos/RedisLogo"
-import FirebaseLogo from "./components/logos/FirebaseLogo"
+
 import ProjectsSection from "./components/seccions/Proyect"
-import { heroData, projects } from "./data/data"
+import { heroData, aboutMeData, projects, skillsData } from "./data/data"
 import Hero from "./components/seccions/Hero"
 import Header from "./components/seccions/Header"
 import AboutMe from "./components/seccions/AboutMe"
+import Skills, { SkillsData } from "./components/seccions/Skills"
 
-
+const skills: SkillsData = skillsData();
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
+    <div className="min-h-screen flex flex-col justify-center items-stretch bg-background text-foreground">
 
       {/* Header */}
       <Header />
@@ -50,96 +26,16 @@ export default function PortfolioPage() {
         <Hero heroData={heroData}/>
 
         {/* About Me Section */}
-        <AboutMe />
+        <AboutMe data={aboutMeData}/>
 
         {/* Projects Section */}
         <ProjectsSection projects={projects}/>
 
         {/* Skills Section */}
-        <section id="habilidades" className="py-20">
-          <div className="container">
-            <h2 className="text-3xl font-bold mb-8 text-center text-primary">Mis Habilidades</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Frontend',
-                  skills: [
-                    {name: 'HTML', logo: <HTML5Logo className="w-6 h-6" />},
-                    { name: 'CSS', logo: <CssLogo className="w-6 h-6" /> },
-                    { name: 'JavaScript', logo: <JavaScriptLogo className="w-6 h-6" /> },
-                    { name: 'Tailwind', logo: <TailwindCSSLogo className="w-6 h-6" /> },
-                    { name: 'TypeScript', logo: <TypeScriptLogo className="w-6 h-6" /> },
-                    { name: 'React', logo: <ReactLogo className="w-6 h-6" /> },
-                  ]
-                },
-                {
-                  title: 'Backend',
-                  skills: [
-                    { name: 'Python', logo: <PythonLogo className="w-6 h-6" /> },
-                    { name: 'FastAPI', logo: <FastApiLogo className="w-6 h-6" /> },
-                    { name: 'SQLAlchemy', logo: <SQLAlchemyLogo className="w-12 h-12" /> },
-                    { name: 'SqlModel', logo: <SqlModelLogo className="w-6 h-6" /> },
-                    { name: 'Pydantic', logo: <PydanticLogo className="w-6 h-6" /> },
-                    { name: 'Pytest', logo: <PytestLogo className="w-6 h-6" /> },
-                  ]
-                },
-                {
-                  title: 'DevOps',
-                  skills: [
-                    { name: 'Linux', logo: <LinuxLogo className="w-6 h-6" /> },
-                    { name: 'Docker', logo: <DockerLogo className="w-6 h-6" /> },
-                    { name: 'Git', logo: <GitLogo className="w-6 h-6" /> },
-                    { name: 'GitHub', logo: <GithubLogo className="w-6 h-6" /> },
-                  ]
-                },
-                {
-                  title: 'Databases',
-                  skills: [
-                    { name: 'SQL', logo: <SQLLogo className="w-6 h-6" /> },
-                    { name: 'MySQL', logo: <MysqlLogo className="w-6 h-6" /> },
-                    { name: 'PostgreSQL', logo: <PostgresqlLogo className="w-6 h-6" /> },
-                    { name: 'MongoDB', logo: <MongodbLogo className="w-6 h-6" /> },
-                  ]
-                },
-                {
-                  title: 'Web Scraping and Data',
-                  skills: [
-                    { name: 'Selenium', logo: <SeleniumLogo className="w-6 h-6" /> },
-                    { name: 'BeautifulSoup', logo: <BeautifulSoupLogo className="w-6 h-6" /> },
-                    { name: 'Jupyter', logo: <JupyterLogo className="w-6 h-6" /> },
-                  ]
-                },
-                {
-                  title: 'What am I studying?',
-                  skills: [
-                    { name: 'Redis', logo: <RedisLogo className="w-6 h-6" /> },
-                    { name: 'Firebase', logo: <FirebaseLogo className="w-6 h-6" /> },
-                    { name: 'LangChain', logo: <FirebaseLogo className="w-6 h-6" /> },
-                  ]
-                },
-              ].map((category) => (
-                <Card key={category.title} className="bg-card shadow-lg hover:shadow-xl transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="text-primary">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {category.skills?.map((skill) => (
-                        <li key={skill?.name} className="flex items-center space-x-2">
-                          {skill?.logo}
-                          <span>{skill?.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Skills categories={skills.categories}/>
 
         {/* Experience and Education Section */}
-        <section id="trayectoria" className="py-20 bg-primary/10">
+        <section id="trayectoria" className="py-20 px-4  flex justify-center bg-primary/10">
           <div className="container">
             <h2 className="text-3xl font-bold mb-8 text-center text-primary">Mi Trayectoria</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -178,7 +74,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contacto" className="py-20">
+        <section id="contacto" className="py-20 px-4  flex justify-center">
           <div className="container">
             <h2 className="text-3xl font-bold mb-8 text-center text-primary">Contáctame</h2>
             <div className="max-w-md mx-auto">
@@ -204,7 +100,7 @@ export default function PortfolioPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted text-muted-foreground py-8">
+      <footer className="bg-muted w-full text-muted-foreground py-8 px-4  flex justify-center">
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">

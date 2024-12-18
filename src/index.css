@@ -10,6 +10,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 @layer base {
   :root {
     /* Name: custom color palette

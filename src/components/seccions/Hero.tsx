@@ -17,7 +17,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
     const isVisible = useOnScreen(ref);
 
     return (
-      <section id="hero" className="py-20">
+      <section id="hero" className="py-20 px-4 flex justify-center bg-primary/10">
         <div className="container flex flex-col items-center justify-center md:flex-row">
           <div ref={ref} className={`md:w-1/2 mb-8 md:mb-0 flex justify-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <img
