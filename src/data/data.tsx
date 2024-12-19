@@ -9,7 +9,6 @@ import TailwindCSSLogo from "@/components/logos/TailwindLogo"
 import CssLogo from "@/components/logos/CssLogo"
 import PythonLogo from "@/components/logos/PythonLogo"
 import FastApiLogo from "@/components/logos/FastApiLogo"
-import SQLAlchemyLogo from "@/components/logos/SQLAlchemyLogo"
 import DockerLogo from "@/components/logos/DockerLogo"
 import GitLogo from "@/components/logos/GitLogo"
 import GithubLogo from "@/components/logos/GithubLogo"
@@ -28,7 +27,7 @@ import RedisLogo from "@/components/logos/RedisLogo"
 import FirebaseLogo from "@/components/logos/FirebaseLogo"
 import { SkillsData } from "@/components/seccions/Skills";
 import { TrayectoriaData } from "@/components/seccions/History";
-import { FlaskConical } from "lucide-react";
+import { FlaskConical, Link } from "lucide-react";
 
 export const projects: Proyecto[] = [
     {
@@ -80,7 +79,7 @@ export const aboutMeData = {
     list: [],
     languages: [
       "Spanish (Native)",
-      "English (Fluent)"
+      "English (A2)"
     ]
   };
 
@@ -139,7 +138,7 @@ export const aboutMeData = {
         skills: [
           { name: 'Redis', logo: <RedisLogo className="w-6 h-6 animate-pulse" /> },
           { name: 'Firebase', logo: <FirebaseLogo className="w-6 h-6 animate-pulse" /> },
-          { name: 'LangChain', logo: <FirebaseLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'LangChain', logo: <Link className="w-6 h-6 animate-pulse" /> },
         ],
       },
     ],
