@@ -42,7 +42,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 					{projects.map((project) => {
 						return (
 							<div className='group' key={project.name} onClick={() => handleCardClick(project)}>
-								<Card className="h-full bg-card shadow-lg group-hover:filter group-hover:brightness-90 dark:group-hover:brightness-125">
+								<Card className="h-full bg-card shadow-lg group-hover:filter group-hover:brightness-90 dark:group-hover:brightness-125 cursor-pointer">
 									<CardHeader className="p-0">
 										<img
 											src={project.imageUrl}
