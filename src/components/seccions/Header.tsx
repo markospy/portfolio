@@ -27,8 +27,8 @@ export default function Header() {
       </div>
       {/* Menú desplegable */}
       {isMenuOpen && (
-        <nav className={`md:hidden bg-muted backdrop-blur-3xl fixed top-9 left-60 w-full z-50 transform transition-all duration-300 ${isScrolled ? 'shadow-md bg-muted backdrop-blur-3xl' : 'bg-primary/10'} ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
-          <ul className="flex flex-col space-y-2 p-4 pl-8 shadow-md">
+        <nav className={`md:hidden fixed top-9 left-60 w-full z-50 backdrop-blur-sm bg-gray-100 shadow-lg transform transition-all duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+          <ul className="flex flex-col space-y-2 p-4 pl-8">
             {['Hero', 'About me', 'Projects', 'My Skills', 'My Path', 'Contact'].map((item) => (
               <li key={item}>
                 <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-primary transition-colors" onClick={closeMenu}>
