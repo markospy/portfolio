@@ -27,6 +27,8 @@ import PydanticLogo from "@/components/logos/PydanticLogo"
 import RedisLogo from "@/components/logos/RedisLogo"
 import FirebaseLogo from "@/components/logos/FirebaseLogo"
 import { SkillsData } from "@/components/seccions/Skills";
+import { TrayectoriaData } from "@/components/seccions/History";
+import { FlaskConical } from "lucide-react";
 
 export const projects: Proyecto[] = [
     {
@@ -66,23 +68,19 @@ export const projects: Proyecto[] = [
 export const heroData = {
     name: "Marcos Antonio Avila Morales",
     title: "Full Stack Developer | Python y JavaScript",
-    description: "I'm a backend who learned how to center divs decently.",
+    description: "Following my passion has been the best decision of my life.",
     github: "https://github.com/markospy"
   };
 
 
 export const aboutMeData = {
     description: [
-      "Soy un desarrollador Full Stack apasionado por crear soluciones digitales innovadoras. Con experiencia en Python y JavaScript, me especializo en desarrollar aplicaciones web robustas y escalables."
+      "I am a Full Stack developer with experience in Python and JavaScript, passionate about self-improvement and developing scalable projects. After leaving medical school, I found my true calling in programming, which has allowed me to create solutions in both frontend and backend. My commitment to continuous learning and my ability to overcome challenges are the pillars that guide me in each project.",
     ],
-    list: [
-      "Experiencia como autodidacta en desarrollo web y programación",
-      "Desarrollo de bots de trading y proyectos personales",
-      "Comprometido con el aprendizaje continuo y las mejores prácticas de desarrollo"
-    ],
+    list: [],
     languages: [
-      "Español (Nativo)",
-      "Inglés (Fluido)"
+      "Spanish (Native)",
+      "English (Fluent)"
     ]
   };
 
@@ -91,58 +89,81 @@ export const aboutMeData = {
       {
         title: 'Frontend',
         skills: [
-          { name: 'HTML', logo: <HTML5Logo className="w-6 h-6" /> },
-          { name: 'CSS', logo: <CssLogo className="w-6 h-6" /> },
-          { name: 'JavaScript', logo: <JavaScriptLogo className="w-6 h-6" /> },
-          { name: 'Tailwind', logo: <TailwindCSSLogo className="w-6 h-6" /> },
-          { name: 'TypeScript', logo: <TypeScriptLogo className="w-6 h-6" /> },
-          { name: 'React', logo: <ReactLogo className="w-6 h-6" /> },
+          { name: 'HTML', logo: <HTML5Logo className="w-6 h-6 animate-pulse" /> },
+          { name: 'CSS', logo: <CssLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'JavaScript', logo: <JavaScriptLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Tailwind', logo: <TailwindCSSLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'TypeScript', logo: <TypeScriptLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'React', logo: <ReactLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
       {
         title: 'Backend',
         skills: [
-          { name: 'Python', logo: <PythonLogo className="w-6 h-6" /> },
-          { name: 'FastAPI', logo: <FastApiLogo className="w-6 h-6" /> },
-          { name: 'SQLAlchemy', logo: <SQLAlchemyLogo className="w-12 h-12" /> },
-          { name: 'SqlModel', logo: <SqlModelLogo className="w-6 h-6" /> },
-          { name: 'Pydantic', logo: <PydanticLogo className="w-6 h-6" /> },
-          { name: 'Pytest', logo: <PytestLogo className="w-6 h-6" /> },
+          { name: 'Python', logo: <PythonLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'FastAPI', logo: <FastApiLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'SQLAlchemy', logo: <FlaskConical className="w-6 h-6 text-blue-400" /> },
+          { name: 'SqlModel', logo: <SqlModelLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Pydantic', logo: <PydanticLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Pytest', logo: <PytestLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
       {
         title: 'DevOps',
         skills: [
-          { name: 'Linux', logo: <LinuxLogo className="w-6 h-6" /> },
-          { name: 'Docker', logo: <DockerLogo className="w-6 h-6" /> },
-          { name: 'Git', logo: <GitLogo className="w-6 h-6" /> },
-          { name: 'GitHub', logo: <GithubLogo className="w-6 h-6" /> },
+          { name: 'Linux', logo: <LinuxLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Docker', logo: <DockerLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Git', logo: <GitLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'GitHub', logo: <GithubLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
       {
         title: 'Databases',
         skills: [
-          { name: 'SQL', logo: <SQLLogo className="w-6 h-6" /> },
-          { name: 'MySQL', logo: <MysqlLogo className="w-6 h-6" /> },
-          { name: 'PostgreSQL', logo: <PostgresqlLogo className="w-6 h-6" /> },
-          { name: 'MongoDB', logo: <MongodbLogo className="w-6 h-6" /> },
+          { name: 'SQL', logo: <SQLLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'MySQL', logo: <MysqlLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'PostgreSQL', logo: <PostgresqlLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'MongoDB', logo: <MongodbLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
       {
         title: 'Web Scraping and Data',
         skills: [
-          { name: 'Selenium', logo: <SeleniumLogo className="w-6 h-6" /> },
-          { name: 'BeautifulSoup', logo: <BeautifulSoupLogo className="w-6 h-6" /> },
-          { name: 'Jupyter', logo: <JupyterLogo className="w-6 h-6" /> },
+          { name: 'Selenium', logo: <SeleniumLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'BeautifulSoup', logo: <BeautifulSoupLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Jupyter', logo: <JupyterLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
       {
         title: 'What am I studying?',
         skills: [
-          { name: 'Redis', logo: <RedisLogo className="w-6 h-6" /> },
-          { name: 'Firebase', logo: <FirebaseLogo className="w-6 h-6" /> },
-          { name: 'LangChain', logo: <FirebaseLogo className="w-6 h-6" /> },
+          { name: 'Redis', logo: <RedisLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'Firebase', logo: <FirebaseLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'LangChain', logo: <FirebaseLogo className="w-6 h-6 animate-pulse" /> },
         ],
       },
     ],
   });
+
+
+export const historyData: TrayectoriaData = {
+  experienciaLaboral: [
+    {
+      titulo: 'Freelance',
+      descripcion: 'I have developed at least 2 projects for clients using python and javascript.',
+    },
+    {
+      titulo: 'Trading Bots',
+      descripcion: 'Developed around 10 trading bots.',
+    },
+  ],
+  formacion: {
+    titulo: 'Autodidact',
+    detalles: [
+      'Online web development and programming courses.',
+      'Technical documentation study.',
+      'Learning from other sources: YouTube, books, blogs, forums.',
+      'Development of personal projects.',
+    ],
+  },
+};

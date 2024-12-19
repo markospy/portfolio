@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 flex justify-center transition-colors duration-300 ${isScrolled && 'md:bg-primary/10'}`}>
+    <header className={`sticky top-0 z-50 flex justify-center bg-primary/10 backdrop-blur-xl`}>
       <div className="md:hidden w-full flex items-center justify-end gap-4 px-4">
         <ThemeToggle />
         <button onClick={toggleMenu}>
@@ -29,7 +29,7 @@ export default function Header() {
       {isMenuOpen && (
         <nav className={`md:hidden bg-muted backdrop-blur-3xl fixed top-9 left-60 w-full z-50 transform transition-all duration-300 ${isScrolled ? 'shadow-md bg-muted backdrop-blur-3xl' : 'bg-primary/10'} ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
           <ul className="flex flex-col space-y-2 p-4 pl-8 shadow-md">
-            {['Hero', 'About me', 'My Projects', 'My Skills', 'Contact'].map((item) => (
+            {['Hero', 'About me', 'Projects', 'My Skills', 'My Path', 'Contact'].map((item) => (
               <li key={item}>
                 <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-primary transition-colors" onClick={closeMenu}>
                   {item}
@@ -46,9 +46,9 @@ export default function Header() {
           <ThemeToggle />
           <nav>
             <ul className="flex space-x-4">
-              {['Hero', 'About me', 'My Proyects', 'My Skills', 'Contact'].map((item) => (
+              {['Hero', 'About me', 'Proyects', 'My Skills', 'My Path', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:underline hover:decoration-2 hover:text-primary transition-colors">
                     {item}
                   </a>
                 </li>

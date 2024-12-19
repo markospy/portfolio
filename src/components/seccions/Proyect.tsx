@@ -18,9 +18,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isVisible = useOnScreen(ref);
 	return (
-			<section id="my-proyects" className="py-20 px-4 bg-muted flex justify-center bg-primary/10">
+			<section id="proyects" className="py-20 px-4 bg-muted flex justify-center bg-primary/10">
 				<div className="container">
-					<h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Explore My Proyects</h2>
+					<h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Explore my Proyects</h2>
 					<div ref={ref} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 						{projects.map((project) => {
 							return (

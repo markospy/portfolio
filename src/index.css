@@ -99,3 +99,8 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+.custom-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Ajusta el grosor aquí */
+}

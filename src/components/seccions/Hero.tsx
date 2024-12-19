@@ -34,15 +34,17 @@ export default function Hero({heroData}: {heroData: HeroData}) {
               <h2 className="text-2xl text-muted-foreground mb-4">{heroData.title}</h2>
               <p className="text-xl mb-6 text-muted-foreground">{heroData.description}</p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Button className="bg-primary hover:bg-primary/90">Contactarme</Button>
-                <Button variant="outline" className="text-primary border-primary hover:bg-primary/10">Descargar CV</Button>
+                <Button className="bg-primary hover:bg-primary/90">Contact me</Button>
+                <a href="/src/assets/Marcos_Avila_CV.pdf" download>
+                  <Button variant="outline" className="text-primary border-primary hover:bg-primary/10">Download CV</Button>
+                </a>
                 <Button
                   asChild
                   variant="outline"
                   className="text-muted-foreground border-gray-300 hover:bg-gray-100"
                 >
                   <a href={heroData.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> Ver mi GitHub
+                    <Github className="mr-2 h-4 w-4" /> See my github
                   </a>
                 </Button>
               </div>
