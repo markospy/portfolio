@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { ThemeToggle } from '../theme-toggle';
-import useScroll from '@/hooks/useScroll';
 
 export default function Header() {
-  const isScrolled = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
