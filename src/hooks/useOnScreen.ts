@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
-const useOnScreen = (ref, delay = 300) => { // Puedes ajustar el delay aquí
+const useOnScreen = (ref: React.RefObject<HTMLElement>, delay = 300) => { // Puedes ajustar el delay aquí
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -13,14 +13,15 @@ const useOnScreen = (ref, delay = 300) => { // Puedes ajustar el delay aquí
                 observer.unobserve(entry.target); // Dejar de observar una vez que se ha hecho visible
             }
         });
+        const refVar = ref.current;
 
         if (ref.current) {
             observer.observe(ref.current);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (refVar) {
+                observer.unobserve(refVar);
             }
         };
     }, [ref, delay]);
