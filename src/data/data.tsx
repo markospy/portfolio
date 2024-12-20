@@ -73,8 +73,8 @@ export const projects: Proyecto[] = [
         technologies: ["React", "Shadcn"],
         description: "This portfolio 😁",
         imageUrl: Portfolio,
-        githubUrl: "https://github.com/usuario/aplicacion-clima",
-        demoUrl: "https://usuario.github.io/aplicacion-clima"
+        githubUrl: "https://github.com/markospy/portfolio_v2",
+        demoUrl: "https://markospy.github.io/portfolio_v2/"
     }
 ];
 
