@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import useOnScreen from '@/hooks/useOnScreen';
+import Telegram from '../logos/Telegram'
 
 const Contacto = () => {
 const ref = useRef<HTMLDivElement>(null);
@@ -43,6 +44,15 @@ const isVisible = useOnScreen(ref);
             >
               <Linkedin className="inline-block mr-2 align-middle" />
               Linkedin
+            </a>
+            <a
+              href="https://t.me/markospy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-4 text-blue-500 hover:text-blue-600 transition-colors duration-300"
+            >
+              <Telegram className="inline-block mr-2 align-middle" />
+              Telegram
             </a>
           </div>
         </div>
