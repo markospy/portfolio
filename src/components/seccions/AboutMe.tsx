@@ -20,23 +20,23 @@ export default function AboutMe({ data }: AboutMeProps) {
   return (
     <section id="about-me" className="py-20 px-4 flex justify-center">
       <div ref={ref} className="container">
-        <h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>About me</h2>
-        <div className={`max-w-2xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>About me</h2>
+        <div className={`max-w-2xl mx-auto text-center transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {data.description.map((text, index) => (
-            <p key={index} className="mb-4 text-muted-foreground">
+            <p key={index} className="mb-4 text-muted-foreground transition-colors duration-300">
               {text}
             </p>
           ))}
-          <ul className="list-disc list-inside text-left text-muted-foreground mb-6">
+          <ul className="list-disc list-inside text-left text-muted-foreground mb-6 transition-colors duration-300">
             {data.list.map((item, index) => (
               <li key={index} className="flex gap-2"><Flame className="text-orange-400 fill-orange-500 animate-pulse"/> {item}</li>
             ))}
           </ul>
           <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-2 text-primary/80">Languages</h3>
+            <h3 className="text-xl font-semibold mb-2 text-primary/80 transition-colors duration-300">Languages</h3>
             <ul className="flex justify-center space-x-4">
               {data.languages.map((language, index) => (
-                <li key={index} className="bg-primary/10 text-primary/80 px-3 py-1 rounded-full">
+                <li key={index} className="bg-primary/10 text-primary/80 px-3 py-1 rounded-full transition-colors duration-300">
                   {language}
                 </li>
               ))}

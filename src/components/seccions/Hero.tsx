@@ -31,7 +31,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
   };
 
   return (
-    <section id="hero" className="py-20 px-4 flex justify-center bg-primary/10">
+    <section id="hero" className="py-20 px-4 flex justify-center bg-primary/10 transition-colors duration-300">
       <div className="container flex flex-col items-center justify-center md:flex-row">
         <div ref={ref} className={`md:w-1/2 mb-8 md:mb-0 flex justify-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <img
@@ -39,14 +39,14 @@ export default function Hero({heroData}: {heroData: HeroData}) {
             alt={heroData.name} // Usar el nombre como texto alternativo
             width={300}
             height={300}
-            className="rounded-full shadow-lg outline outline-muted"
+            className="rounded-full shadow-lg outline outline-muted transition-colors duration-300"
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left flex justify-center">
           <div className={`transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-4xl font-bold mb-4 text-primary">{heroData.name}</h1>
-            <h2 className="text-2xl text-muted-foreground mb-4">{heroData.title}</h2>
-            <p className="text-xl mb-6 text-muted-foreground">{heroData.description}</p>
+            <h1 className="text-4xl font-bold mb-4 text-primary transition-colors duration-300">{heroData.name}</h1>
+            <h2 className="text-2xl text-muted-foreground mb-4 transition-colors duration-300">{heroData.title}</h2>
+            <p className="text-xl mb-6 text-muted-foreground transition-colors duration-300">{heroData.description}</p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Button onClick={showModal} className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm hover:shadow-lg transition-all duration-300">
                <Hand className='animate-rotational-wave'/>Say Hello!
