@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import useOnScreen from '@/hooks/useOnScreen';
 import { Flame } from 'lucide-react';
 
-export interface TrayectoriaData {
+export interface PathData {
   experienciaLaboral: {
     titulo: string;
     descripcion: string;
@@ -14,11 +14,11 @@ export interface TrayectoriaData {
   };
 }
 
-interface TrayectoriaProps {
-  data: TrayectoriaData;
+interface PathProps {
+  data: PathData;
 }
 
-const Trayectoria: React.FC<TrayectoriaProps> = ({ data }) => {
+const Path = ({ data }: PathProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
   return (
@@ -26,7 +26,7 @@ const Trayectoria: React.FC<TrayectoriaProps> = ({ data }) => {
       <div ref={ref}  className="container">
         <h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>My Path</h2>
         <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <Card className="bg-card shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-card shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="text-primary">Work Experience</CardTitle>
             </CardHeader>
@@ -34,19 +34,19 @@ const Trayectoria: React.FC<TrayectoriaProps> = ({ data }) => {
               <ul className="space-y-4">
                 {data.experienciaLaboral.map((item, index) => (
                   <li key={index}>
-                    <h3 className="font-bold text-foreground">{item.titulo}</h3>
+                    <h3 className="font-bold text-primary/80">{item.titulo}</h3>
                     <p className="text-muted-foreground">{item.descripcion}</p>
                   </li>
                 ))}
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-card shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-card shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="text-primary">Training</CardTitle>
             </CardHeader>
             <CardContent>
-              <h3 className="font-bold text-foreground">{data.formacion.titulo}</h3>
+              <h3 className="font-bold text-primary/80">{data.formacion.titulo}</h3>
               <ul className="list-disc list-inside text-muted-foreground">
                 {data.formacion.detalles.map((detalle, index) => (
                   <li key={index} className="flex gap-2"><Flame className="text-orange-400 fill-orange-500 animate-pulse"/> {detalle}</li>
@@ -60,4 +60,4 @@ const Trayectoria: React.FC<TrayectoriaProps> = ({ data }) => {
   );
 };
 
-export default Trayectoria;
+export default Path;

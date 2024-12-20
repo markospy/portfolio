@@ -42,7 +42,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 					{projects.map((project) => {
 						return (
 							<div className='group' key={project.name} onClick={() => handleCardClick(project)}>
-								<Card className="h-full bg-card shadow-lg group-hover:filter group-hover:brightness-90 dark:group-hover:brightness-125 cursor-pointer">
+								<Card className="h-full bg-card shadow-lg hover:shadow-2xl hover:animate-slide-out-top cursor-pointer">
 									<CardHeader className="p-0">
 										<img
 											src={project.imageUrl}
@@ -51,7 +51,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 										/>
 									</CardHeader>
 									<CardContent className="flex flex-col justify-end p-6">
-										<CardTitle className="mb-2 text-primary">{project.name}</CardTitle>
+										<CardTitle className="mb-2 text-primary/80">{project.name}</CardTitle>
 									</CardContent>
 								</Card>
 							</div>
@@ -61,14 +61,14 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 			</div>
 			{isModalOpen && selectedProject && (
 				<Modal onClose={closeModal}>
-					<h2 className="text-2xl font-bold">{selectedProject.name}</h2>
+					<h2 className="text-2xl font-bold text-primary">{selectedProject.name}</h2>
 					<img src={selectedProject.imageUrl} alt={`Proyecto ${selectedProject.name}`} className ="w-full rounded-lg mb-4" />
-					<p className="mb-2">{selectedProject.description}</p>
-					<p className="font-semibold">Tecnologías: {selectedProject.technologies.join(', ')}</p>
+					<p className="mb-2 text-muted-foreground">{selectedProject.description}</p>
+					<p className="font-semibold text-muted-foreground">Tecnologías: {selectedProject.technologies.join(', ')}.</p>
 					<div className="mt-4 flex gap-4 justify-end">
-						<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 flex gap-2"><Github /></a>
+						<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 flex gap-2"><Github /></a>
 						{selectedProject.demoUrl && (
-							<a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 ml-4 flex gap-2"><ExternalLink /></a>
+							<a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 ml-4 flex gap-2"><ExternalLink /></a>
 						)}
 					</div>
 				</Modal>

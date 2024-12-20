@@ -19,75 +19,76 @@ html {
        URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: #0c0c6d;
-    --background: 255 99% 98.48%;
-    --foreground: 255 8% 0.96%;
+    --gradient: #6a9eff; /* Un azul más claro para el degradado */
 
-    --muted: 255 8% 92.4%;
-    --muted-foreground: 255 4% 42.4%;
+    --background: 210 100% 98%; /* Fondo claro */
+    --foreground: 210 10% 20%; /* Texto oscuro para contraste */
 
-    --popover: 255 26% 92.4%;
-    --popover-foreground: 255 8% 1.2%;
+    --muted: 210 50% 90%; /* Color más claro para elementos menos destacados */
+    --muted-foreground: 210 10% 30%; /* Texto oscuro sobre fondo muted */
 
-    --card: 255 26% 92.4%;
-    --card-foreground: 255 8% 1.2%;
+    --popover: 210 50% 95%; /* Fondo claro para popups */
+    --popover-foreground: 210 10% 20%; /* Texto oscuro en popups */
 
-    --border: 255 13% 89.96%;
-    --input: 255 13% 89.96%;
+    --card: 210 50% 95%; /* Fondo claro para tarjetas */
+    --card-foreground: 210 10% 20%; /* Texto oscuro en tarjetas */
 
-    --primary: 255 80% 24%;
-    --primary-foreground: 255 1.6% 92.4%;
+    --border: 210 50% 80%; /* Color de borde más claro */
+    --input: 210 50% 90%; /* Fondo claro para campos de entrada */
 
-    --secondary: 255 4% 96.2%;
-    --secondary-foreground: 255 5.800000000000001% 12.4%;
+    --primary: 210 100% 60%; /* Color primario más claro */
+    --primary-foreground: 210 10% 95%; /* Texto claro sobre el color primario */
 
-    --accent: 255 4% 96.2%;
-    --accent-foreground: 255 5.800000000000001% 12.4%;
+    --secondary: 210 50% 85%; /* Color secundario más claro */
+    --secondary-foreground: 210 10% 20%; /* Texto oscuro sobre el color secundario */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --accent: 210 50% 85%; /* Color de acento más claro */
+    --accent-foreground: 210 10% 20%; /* Texto oscuro sobre el color de acento */
 
-    --ring: 255 80% 24%;
+    --destructive: 0 100% 60%; /* Color destructivo más claro (rojo) */
+    --destructive-foreground: 210 10% 95%; /* Texto claro sobre el color destructivo */
+
+    --ring: 210 100% 60%; /* Color de anillo más claro */
 
     --radius: 0.5rem;
   }
- 
+
   .dark {
     /* Name: custom color palette
        Author: Ilias Ism
        URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: #007adf;
+    --gradient: #245bff;
 
-    --background: 220 65% 3.52%;
-    --foreground: 220 10% 97.2%;
+    --background: 239 65% 4.56%;
+    --foreground: 239 10% 97.85%;
 
-    --muted: 220 50% 13.2%;
-    --muted-foreground: 220 10% 54.4%;
+    --muted: 239 50% 17.099999999999998%;
+    --muted-foreground: 239 10% 55.7%;
 
-    --popover: 220 45% 5.72%;
-    --popover-foreground: 220 10% 97.2%;
+    --popover: 239 45% 7.409999999999999%;
+    --popover-foreground: 239 10% 97.85%;
 
-    --card: 220 45% 5.72%;
-    --card-foreground: 220 10% 97.2%;
+    --card: 239 45% 7.409999999999999%;
+    --card-foreground: 239 10% 97.85%;
 
-    --border: 220 50% 13.2%;
-    --input: 220 50% 13.2%;
+    --border: 239 50% 17.099999999999998%;
+    --input: 239 50% 17.099999999999998%;
 
-    --primary: 220 100% 44%;
-    --primary-foreground: 220 10% 97.2%;
+    --primary: 239 100% 57%;
+    --primary-foreground: 239 10% 5.699999999999999%;
 
-    --secondary: 220 50% 13.2%;
-    --secondary-foreground: 220 10% 97.2%;
+    --secondary: 239 50% 17.099999999999998%;
+    --secondary-foreground: 239 10% 97.85%;
 
-    --accent: 220 50% 13.2%;
-    --accent-foreground: 220 10% 97.2%;
+    --accent: 239 50% 17.099999999999998%;
+    --accent-foreground: 239 10% 97.85%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 220 10% 97.2%;
+    --destructive-foreground: 239 10% 97.85%;
 
-    --ring: 220 100% 44%;
+    --ring: 239 100% 57%;
   }
 }
  

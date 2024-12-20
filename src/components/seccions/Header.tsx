@@ -25,7 +25,7 @@ export default function Header() {
       </div>
       {/* Menú desplegable */}
       {isMenuOpen && (
-        <nav className={`md:hidden fixed top-9 left-60 w-full z-50 backdrop-blur-sm bg-gray-100 shadow-lg transform transition-all duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <nav className={`md:hidden fixed top-9 left-60 w-full z-50 backdrop-blur-sm bg-accent rounded-bl-lg shadow-lg transform transition-all duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <ul className="flex flex-col space-y-2 p-4 pl-8">
             {['Hero', 'About me', 'Projects', 'My Skills', 'My Path', 'Contact'].map((item) => (
               <li key={item}>
@@ -38,7 +38,7 @@ export default function Header() {
         </nav>
       )}
       {/* Menú en versión de escritorio */}
-      <div className="container hidden md:flex items-center justify-around py-4">
+      <div className="container hidden md:flex items-center justify-center space-x-28 py-4">
         <div className="text-xl font-bold text-primary">Marcos Avila - Full Stack Developer</div>
         <div className="flex items-center space-x-4">
           <ThemeToggle />

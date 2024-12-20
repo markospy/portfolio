@@ -28,14 +28,14 @@ const Skills = ({ categories }: SkillsData) => {
       <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {categories.map((category) => {
         return (
-        <Card key={category.title} className="bg-card shadow-lg hover:shadow-xl transition-shadow">
+        <Card key={category.title} className="bg-card shadow-lg">
           <CardHeader>
-            <CardTitle className="text-primary">{category.title}</CardTitle>
+            <CardTitle className="text-primary/80">{category.title}</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
             {category.skills.map((skill) => (
-              <li key={skill.name} className="flex items-center space-x-2">
+              <li key={skill.name} className="flex items-center space-x-2 text-muted-foreground">
               {skill.logo}
               <span>{skill.name}</span>
               </li>

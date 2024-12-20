@@ -33,10 +33,10 @@ export default function AboutMe({ data }: AboutMeProps) {
             ))}
           </ul>
           <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-2 text-primary">Languages</h3>
+            <h3 className="text-xl font-semibold mb-2 text-primary/80">Languages</h3>
             <ul className="flex justify-center space-x-4">
               {data.languages.map((language, index) => (
-                <li key={index} className="bg-primary/10 text-primary px-3 py-1 rounded-full">
+                <li key={index} className="bg-primary/10 text-primary/80 px-3 py-1 rounded-full">
                   {language}
                 </li>
               ))}
