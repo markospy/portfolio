@@ -61,34 +61,25 @@ html {
     /* CSS: .bg-gradient { background: var(--gradient) } */
     --gradient: #245bff;
 
-    --background: 239 65% 4.56%;
-    --foreground: 239 10% 97.85%;
-
-    --muted: 239 50% 17.099999999999998%;
-    --muted-foreground: 239 10% 55.7%;
-
-    --popover: 239 45% 7.409999999999999%;
-    --popover-foreground: 239 10% 97.85%;
-
-    --card: 239 45% 7.409999999999999%;
-    --card-foreground: 239 10% 97.85%;
-
-    --border: 239 50% 17.099999999999998%;
-    --input: 239 50% 17.099999999999998%;
-
-    --primary: 239 100% 57%;
-    --primary-foreground: 239 10% 5.699999999999999%;
-
-    --secondary: 239 50% 17.099999999999998%;
-    --secondary-foreground: 239 10% 97.85%;
-
-    --accent: 239 50% 17.099999999999998%;
-    --accent-foreground: 239 10% 97.85%;
-
+--background: 0, 0%, 10%;
+    --foreground: 210 40% 98%;
+    --card: 0, 0%, 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0, 0%, 13%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 236 79% 62%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 5% 26%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 5% 26%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 220 5% 26%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 239 10% 97.85%;
-
-    --ring: 239 100% 57%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 5% 26%;
+    --input: 220 5% 26%;
+    --ring: 236 79% 62%;
   }
 }
  
