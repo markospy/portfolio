@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 flex justify-center bg-primary/10 backdrop-blur-xl transition-colors duration-300`}>
+    <header className={`sticky top-0 z-50 flex justify-center border-b border-gray-500/20 shadow-sm bg-primary/10 backdrop-blur-xl transition-colors duration-300`}>
       <div className="md:hidden w-full flex items-center justify-end gap-4 px-4">
         <ThemeToggle />
         <button onClick={toggleMenu}>
