@@ -49,7 +49,7 @@ const Path = ({ data }: PathProps) => {
               <h3 className="font-bold text-primary/80 transition-colors duration-300">{data.formacion.titulo}</h3>
               <ul className="text-muted-foreground transition-colors duration-300">
                 {data.formacion.detalles.map((detalle, index) => (
-                  <li key={index} className="flex gap-2"><Flame className="text-orange-400 fill-orange-500 animate-pulse"/> {detalle}</li>
+                  <li key={index} className="[&>svg]:inline-block"><Flame className="text-orange-400 fill-orange-500 animate-pulse"/> {detalle}</li>
                 ))}
               </ul>
             </CardContent>
