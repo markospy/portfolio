@@ -1,4 +1,4 @@
-import { Proyecto } from "@/components/seccions/Proyect";
+import { Proyecto } from "@/components/seccions/Project";
 
 // Importamos solo el logo de React
 import ReactLogo from '@/components/logos/ReactLogo'

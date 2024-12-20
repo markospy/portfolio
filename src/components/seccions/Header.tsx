@@ -44,7 +44,7 @@ export default function Header() {
           <ThemeToggle />
           <nav>
             <ul className="flex space-x-4">
-              {['Hero', 'About me', 'Proyects', 'My Skills', 'My Path', 'Contact'].map((item) => (
+              {['Hero', 'About me', 'Projects', 'My Skills', 'My Path', 'Contact'].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-muted-foreground hover:underline hover:decoration-2 hover:text-primary  transition-colors duration-300">
                     {item}

@@ -32,7 +32,7 @@ const isVisible = useOnScreen(ref);
               <Mail className="inline-block mr-2 align-middle" />
               Email
             </a>
-            <a href="https://github.com/markospy" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+            <a href="https://github.com/markospy" target="_blank" rel="noopener noreferrer" className="mr-4 text-blue-500 hover:text-blue-600 transition-colors duration-300">
               <Github className="inline-block mr-2 align-middle" />
               GitHub
             </a>

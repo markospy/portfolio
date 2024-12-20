@@ -1,4 +1,4 @@
-import ProjectsSection from "./components/seccions/Proyect"
+import Projects from "./components/seccions/Project"
 import { heroData, aboutMeData, projects, skillsData, historyData } from "./data/data"
 import Hero from "./components/seccions/Hero"
 import Header from "./components/seccions/Header"
@@ -17,7 +17,7 @@ export default function PortfolioPage() {
       <main className="flex-grow">
         <Hero heroData={heroData}/>
         <AboutMe data={aboutMeData}/>
-        <ProjectsSection projects={projects}/>
+        <Projects projects={projects}/>
         <Skills categories={skills.categories}/>
         <Path data={historyData} />
         <Contacto />

@@ -18,7 +18,7 @@ interface ProjectsSectionProps {
 	projects: Proyecto[]; // Array de proyectos
 }
 
-const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
+const Projects = ({ projects }: ProjectsSectionProps) => {
 	const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const ref = useRef<HTMLDivElement>(null);
@@ -37,7 +37,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 	return (
 		<section id="proyects" className="py-20 px-4 flex justify-center bg-primary/10  transition-colors duration-300">
 			<div className="container">
-				<h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Explore my Proyects</h2>
+				<h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Explore my Projects</h2>
 				<div ref={ref} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 					{projects.map((project) => {
 						return (
@@ -77,4 +77,4 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 	);
 };
 
-export default ProjectsSection;
+export default Projects;
