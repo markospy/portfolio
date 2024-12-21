@@ -61,15 +61,21 @@ const Projects = ({ projects }: ProjectsSectionProps) => {
 			</div>
 			{isModalOpen && selectedProject && (
 				<Modal onClose={closeModal}>
-					<h2 className="text-2xl font-bold text-primary transition-colors duration-300">{selectedProject.name}</h2>
-					<img src={selectedProject.imageUrl} alt={`Proyecto ${selectedProject.name}`} className ="w-full rounded-lg mb-4" />
-					<p className="mb-2 text-muted-foreground transition-colors duration-300">{selectedProject.description}</p>
-					<p className="font-semibold text-muted-foreground transition-colors duration-300">Tecnologías: {selectedProject.technologies.join(', ')}.</p>
-					<div className="mt-4 flex gap-4 justify-end">
-						<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 flex gap-2"><Github /></a>
-						{selectedProject.demoUrl && (
-							<a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 ml-4 flex gap-2"><ExternalLink /></a>
-						)}
+					<div className='w-full'>
+						<h2 className="text-2xl font-bold text-primary mb-3">{selectedProject.name}</h2>
+						<div className='flex flex-col md:flex-row w-full gap-4'>
+							<img src={selectedProject.imageUrl} alt={`Proyecto ${selectedProject.name}`} className ="w-full md:w-1/2 h-fit rounded-lg mb-4" />
+							<div className='flex flex-col justify-between'>
+								<p className="mb-2 text-muted-foreground">{selectedProject.description}</p>
+								<p className="font-semibold text-muted-foreground">Technologies: {selectedProject.technologies.join(', ')}.</p>
+								<div className="mt-4 flex gap-4 justify-end">
+									<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 flex gap-2"><Github /></a>
+									{selectedProject.demoUrl && (
+										<a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 ml-4 flex gap-2"><ExternalLink /></a>
+									)}
+								</div>
+							</div>
+						</div>
 					</div>
 				</Modal>
 			)}
