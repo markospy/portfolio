@@ -1,6 +1,6 @@
 import { ArrowDownToLine, Github, Hand } from 'lucide-react'
 import { Button } from '../ui/button'
-import Photo from "../../assets/photo.jpg"
+import Photo from "../../assets/photo.png"
 import useOnScreen from '@/hooks/useOnScreen';
 import { useRef, useState } from 'react';
 import Modal from '../Modal';
@@ -33,13 +33,13 @@ export default function Hero({heroData}: {heroData: HeroData}) {
   return (
     <section id="hero" className="flex justify-center bg-primary/10 px-4 py-20 transition-colors duration-300">
       <div className="flex md:flex-row flex-col justify-center items-center container">
-        <div ref={ref} className={`md:w-1/2 mb-8 md:mb-0 flex justify-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div ref={ref} className={`mb-8 md:mb-0 flex justify-center transition-all duration-500 w-72 h-72 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <img
             src={Photo} // Asegúrate de que Photo esté importado
             alt={heroData.name} // Usar el nombre como texto alternativo
             width={300}
             height={300}
-            className="shadow-lg rounded-full transition-colors duration-300 outline outline-muted"
+            className="shadow-lg rounded-full w-full h-full transform transition-colors duration-300 object-cover outline outline-muted"
           />
         </div>
         <div className="flex justify-center md:w-1/2 text-center md:text-left">
