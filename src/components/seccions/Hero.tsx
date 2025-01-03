@@ -31,38 +31,38 @@ export default function Hero({heroData}: {heroData: HeroData}) {
   };
 
   return (
-    <section id="hero" className="py-20 px-4 flex justify-center bg-primary/10 transition-colors duration-300">
-      <div className="container flex flex-col items-center justify-center md:flex-row">
+    <section id="hero" className="flex justify-center bg-primary/10 px-4 py-20 transition-colors duration-300">
+      <div className="flex md:flex-row flex-col justify-center items-center container">
         <div ref={ref} className={`md:w-1/2 mb-8 md:mb-0 flex justify-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <img
             src={Photo} // Asegúrate de que Photo esté importado
             alt={heroData.name} // Usar el nombre como texto alternativo
             width={300}
             height={300}
-            className="rounded-full shadow-lg outline outline-muted transition-colors duration-300"
+            className="shadow-lg rounded-full transition-colors duration-300 outline outline-muted"
           />
         </div>
-        <div className="md:w-1/2 text-center md:text-left flex justify-center">
+        <div className="flex justify-center md:w-1/2 text-center md:text-left">
           <div className={`transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-4xl font-bold mb-4 text-primary transition-colors duration-300">{heroData.name}</h1>
-            <h2 className="text-2xl text-muted-foreground mb-4 transition-colors duration-300">{heroData.title}</h2>
-            <p className="text-xl mb-6 text-muted-foreground transition-colors duration-300">{heroData.description}</p>
+            <h1 className="mb-4 font-bold text-4xl text-primary transition-colors duration-300">{heroData.name}</h1>
+            <h2 className="mb-4 text-2xl text-muted-foreground transition-colors duration-300">{heroData.title}</h2>
+            <p className="mb-6 text-muted-foreground text-xl transition-colors duration-300">{heroData.description}</p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <Button onClick={showModal} className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm hover:shadow-lg transition-all duration-300">
+              <Button onClick={showModal} className="bg-primary hover:bg-primary/90 shadow-sm hover:shadow-lg text-primary-foreground transition-all duration-300">
                <Hand className='animate-rotational-wave'/>Say Hello!
               </Button>
-              <a href="/src/assets/Marcos_Avila_CV.pdf" download>
-                <Button variant="outline" className="text-primary border-primary hover:bg-primary/10 hover:text-primary shadow-sm hover:shadow-lg transition-all duration-300">
+              <a href="/public/Marcos_Avila_CV.pdf" download>
+                <Button variant="outline" className="border-primary hover:bg-primary/10 shadow-sm hover:shadow-lg text-primary hover:text-primary transition-all duration-300">
                   <ArrowDownToLine />Download CV
                 </Button>
               </a>
               <Button
                 asChild
                 variant="outline"
-                className="text-muted-foreground border-muted hover:bg-muted shadow-sm hover:shadow-lg transition-all duration-300"
+                className="border-muted hover:bg-muted shadow-sm hover:shadow-lg text-muted-foreground transition-all duration-300"
               >
                 <a href={heroData.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" /> See my github
+                  <Github className="mr-2 w-4 h-4" /> See my github
                 </a>
               </Button>
             </div>
@@ -71,9 +71,9 @@ export default function Hero({heroData}: {heroData: HeroData}) {
       </div>
 			{isModalOpen && (
 				<Modal onClose={showModal} >
-          <form className="space-y-4 pt-4 px-2 w-full" onSubmit={handleSubmit}>
-            <Textarea placeholder="Message"  className="bg-input border-border focus:border-ring h-40 transition-colors duration-300" />
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/70 text-primary-foreground border-2 border-ring transition-colors duration-300">Send</Button>
+          <form className="space-y-4 px-2 pt-4 w-full" onSubmit={handleSubmit}>
+            <Textarea placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
+            <Button type="submit" className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300">Send</Button>
           </form>
 				</Modal>
 			)}
