@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="flex justify-center bg-muted px-4 py-8 w-full text-muted-foreground transition-colors duration-300">
       <div className="flex flex-col justify-between items-center">
-        <a href="Marcos_Avila_CV.pdf" download>
+        <a href="Currículum Vitae Cv Marcos Antonio Avila.pdf" download>
           <Button variant="outline" className="border-muted-foreground bg-secondary hover:bg-secondary/10 mb-4 hover:border-ring text-secondary-foreground transition-colors duration-300">
             <ArrowDownToLine />Download CV
           </Button>

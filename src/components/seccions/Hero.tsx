@@ -51,7 +51,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
               <Button onClick={showModal} className="bg-primary hover:bg-primary/90 shadow-sm hover:shadow-lg text-primary-foreground transition-all duration-300">
                <Hand className='animate-rotational-wave'/>Say Hello!
               </Button>
-              <a href="Marcos_Avila_CV.pdf" download>
+              <a href="Currículum Vitae Cv Marcos Antonio Avila.pdf" download>
                 <Button variant="outline" className="border-primary hover:bg-primary/10 shadow-sm hover:shadow-lg text-primary hover:text-primary transition-all duration-300">
                   <ArrowDownToLine />Download CV
                 </Button>
