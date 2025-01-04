@@ -96,7 +96,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
 			{isModalOpen && (
 				<Modal onClose={showModal} >
           <form ref={form} className="space-y-4 px-2 pt-4 w-full" onSubmit={sendEmail}>
-            <Textarea placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
+            <Textarea name="message" placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
             <Button
               type="submit"
               className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300"

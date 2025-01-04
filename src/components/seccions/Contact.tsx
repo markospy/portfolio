@@ -48,9 +48,9 @@ const Contacto = () => {
         <h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Contact Me</h2>
         <div className={`max-w-md mx-auto transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <form ref={form} className="space-y-4" onSubmit={sendEmail}>
-            <Input placeholder="Name" className="bg-input focus:border-ring border-border transition-colors duration-300" />
-            <Input type="email" placeholder="Email" className="bg-input focus:border-ring border-border transition-colors duration-300" />
-            <Textarea placeholder="Message"  className="bg-input focus:border-ring border-border h-28 transition-colors duration-300" />
+            <Input name="user_name" placeholder="Name" className="bg-input focus:border-ring border-border transition-colors duration-300" />
+            <Input name="user_email" type="email" placeholder="Email" className="bg-input focus:border-ring border-border transition-colors duration-300" />
+            <Textarea name="message" placeholder="Message" className="bg-input focus:border-ring border-border h-28 transition-colors duration-300" />
             <Button
               type="submit"
               className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300"
