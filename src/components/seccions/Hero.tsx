@@ -6,7 +6,15 @@ import { useRef, useState } from 'react';
 import Modal from '../Modal';
 import React from 'react';
 import { Textarea } from '../ui/textarea';
+import toast, { Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
+const success = () => toast('The message was sent successfully ✅. Marcos will be in touch with you very soon.');
+const failed = () => toast('An error has occurred ❌. Please try again.');
+
+const YOUR_SERVICE_ID = 'service_a7zeqkr';
+const YOUR_TEMPLATE_ID = 'template_ctwrpnw';
+const YOUR_PUBLIC_KEY = 'KLalvGa4DteU5sIy_';
 interface HeroData {
     name: string;
     title: string;
@@ -17,17 +25,33 @@ interface HeroData {
 
 export default function Hero({heroData}: {heroData: HeroData}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [buttonState, setbuttonState] = useState('Send');
   const ref = useRef<HTMLDivElement>(null);
+  const form = useRef<HTMLFormElement>(null);
   const isVisible = useOnScreen(ref);
 
 	const showModal = () => {
 		setIsModalOpen(!isModalOpen);
 	};
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Aquí puedes manejar el envío del formulario
-    console.log('Formulario enviado');
+  const sendEmail = (e:React.FormEvent) => {
+    e.preventDefault();
+    setbuttonState('Sending')
+
+    emailjs
+      .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current as HTMLFormElement, {
+        publicKey: YOUR_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          success()
+          setIsModalOpen(false)
+          setbuttonState('Send');
+        },
+        () => {
+          failed();
+        },
+      );
   };
 
   return (
@@ -71,12 +95,19 @@ export default function Hero({heroData}: {heroData: HeroData}) {
       </div>
 			{isModalOpen && (
 				<Modal onClose={showModal} >
-          <form className="space-y-4 px-2 pt-4 w-full" onSubmit={handleSubmit}>
+          <form ref={form} className="space-y-4 px-2 pt-4 w-full" onSubmit={sendEmail}>
             <Textarea placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
-            <Button type="submit" className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300">Send</Button>
+            <Button
+              type="submit"
+              className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300"
+              disabled={buttonState==='Send'? false : true}
+            >
+              {buttonState}
+            </Button>
           </form>
 				</Modal>
 			)}
+      <Toaster />
     </section>
   );
 }

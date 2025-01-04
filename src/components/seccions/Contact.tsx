@@ -1,34 +1,66 @@
 import { Mail, Github, Linkedin } from 'lucide-react';
-import React, { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import useOnScreen from '@/hooks/useOnScreen';
-import Telegram from '../logos/Telegram'
+import Telegram from '../logos/Telegram';
+import toast, { Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
+
+const success = () => toast('The message was sent successfully ✅. Marcos will be in touch with you very soon.');
+const failed = () => toast('An error has occurred ❌. Please try again.');
+
+const YOUR_SERVICE_ID = 'service_a7zeqkr';
+const YOUR_TEMPLATE_ID = 'template_ctwrpnw';
+const YOUR_PUBLIC_KEY = 'KLalvGa4DteU5sIy_';
 
 const Contacto = () => {
-const ref = useRef<HTMLDivElement>(null);
-const isVisible = useOnScreen(ref);
+  const ref = useRef<HTMLDivElement>(null);
+  const form = useRef<HTMLFormElement>(null);
+  const isVisible = useOnScreen(ref);
+  const [buttonState, setbuttonState] = useState('Send');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Aquí puedes manejar el envío del formulario
-    console.log('Formulario enviado');
+  const sendEmail = (e:React.FormEvent) => {
+    e.preventDefault();
+    setbuttonState('Sending')
+    const formRef = form.current as HTMLFormElement;
+
+    emailjs
+      .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formRef, {
+        publicKey: YOUR_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          success();
+          formRef.reset();
+          setbuttonState('Send');
+        },
+        () => {
+          failed();
+        },
+      );
   };
 
   return (
-    <section id="contact" className="py-20 px-4 flex justify-center">
+    <section id="contact" className="flex justify-center px-4 py-20">
       <div ref={ref} className="container">
         <h2 className={`text-3xl font-bold mb-8 text-center text-primary transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>Contact Me</h2>
         <div className={`max-w-md mx-auto transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <Input placeholder="Name" className="bg-input border-border focus:border-ring transition-colors duration-300" />
-            <Input type="email" placeholder="Email" className="bg-input border-border focus:border-ring transition-colors duration-300" />
-            <Textarea placeholder="Message"  className="bg-input border-border focus:border-ring h-28 transition-colors duration-300" />
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/70 text-primary-foreground border-2 border-ring transition-colors duration-300">Send</Button>
+          <form ref={form} className="space-y-4" onSubmit={sendEmail}>
+            <Input placeholder="Name" className="bg-input focus:border-ring border-border transition-colors duration-300" />
+            <Input type="email" placeholder="Email" className="bg-input focus:border-ring border-border transition-colors duration-300" />
+            <Textarea placeholder="Message"  className="bg-input focus:border-ring border-border h-28 transition-colors duration-300" />
+            <Button
+              type="submit"
+              className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300"
+              disabled={buttonState==='Send'? false : true}
+            >
+              {buttonState}
+            </Button>
           </form>
-          <div className="mt-8 flex justify-center space-x-5">
-            <a href="mailto:tu-email@ejemplo.com" className="text-blue-500 hover:text-blue-600 transition-colors duration-300">
+          <div className="flex justify-center space-x-5 mt-8">
+            <a href="mailto:marco.developer@outlook.com" className="text-blue-500 hover:text-blue-600 transition-colors duration-300">
               <Mail className="inline-block mr-2 align-middle" />
               Email
             </a>
@@ -57,6 +89,7 @@ const isVisible = useOnScreen(ref);
           </div>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 };
