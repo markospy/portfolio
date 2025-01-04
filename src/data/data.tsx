@@ -108,6 +108,7 @@ export const aboutMeData = {
           { name: 'Tailwind', logo: <TailwindCSSLogo className="w-6 h-6 animate-pulse" /> },
           { name: 'TypeScript', logo: <TypeScriptLogo className="w-6 h-6 animate-pulse" /> },
           { name: 'React', logo: <ReactLogo className="w-6 h-6 animate-pulse" /> },
+          { name: 'React Native', logo: <ReactLogo className="w-6 h-6 animate-pulse" /> }
         ],
       },
       {
