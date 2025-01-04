@@ -69,7 +69,7 @@ const Contacto = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/markospy/"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-4 text-blue-500 hover:text-blue-600 transition-colors duration-300"
