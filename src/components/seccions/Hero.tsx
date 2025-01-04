@@ -37,6 +37,11 @@ export default function Hero({heroData}: {heroData: HeroData}) {
   const sendEmail = (e:React.FormEvent) => {
     e.preventDefault();
     setbuttonState('Sending')
+    console.log(form.current)
+    if(form.current === null) {
+      console.log("Hola")
+      return
+    }
 
     emailjs
       .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current as HTMLFormElement, {
@@ -56,7 +61,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
 
   return (
     <section id="hero" className="flex justify-center bg-primary/10 px-4 py-20 transition-colors duration-300">
-      <div className="flex md:flex-row flex-col justify-center items-center container">
+      <div className="flex md:flex-row flex-col justify-center items-center md:gap-3 container">
         <div ref={ref} className={`mb-8 md:mb-0 flex justify-center transition-all duration-500 w-72 h-72 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <img
             src={Photo} // Asegúrate de que Photo esté importado
@@ -96,7 +101,7 @@ export default function Hero({heroData}: {heroData: HeroData}) {
 			{isModalOpen && (
 				<Modal onClose={showModal} >
           <form ref={form} className="space-y-4 px-2 pt-4 w-full" onSubmit={sendEmail}>
-            <Textarea name="message" placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
+            <Textarea name="message" required placeholder="Message"  className="bg-input focus:border-ring border-border h-40 transition-colors duration-300" />
             <Button
               type="submit"
               className="border-2 bg-primary hover:bg-primary/70 border-ring w-full text-primary-foreground transition-colors duration-300"
