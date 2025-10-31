@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@layer base {
+  :root {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: #6a9eff; /* Un azul más claro para el degradado */
+
+    --background: 210 100% 98%; /* Fondo claro */
+    --foreground: 210 10% 20%; /* Texto oscuro para contraste */
+
+    --muted: 210 50% 90%; /* Color más claro para elementos menos destacados */
+    --muted-foreground: 210 10% 30%; /* Texto oscuro sobre fondo muted */
+
+    --popover: 210 50% 95%; /* Fondo claro para popups */
+    --popover-foreground: 210 10% 20%; /* Texto oscuro en popups */
+
+    --card: 210 50% 95%; /* Fondo claro para tarjetas */
+    --card-foreground: 210 10% 20%; /* Texto oscuro en tarjetas */
+
+    --border: 210 50% 80%; /* Color de borde más claro */
+    --input: 210 50% 90%; /* Fondo claro para campos de entrada */
+    
+    --primary: 210 100% 60%; /* Color primario más claro */
+    --primary-foreground: 210 10% 95%; /* Texto claro sobre el color primario */
+
+    --secondary: 210 50% 85%; /* Color secundario más claro */
+    --secondary-foreground: 210 10% 20%; /* Texto oscuro sobre el color secundario */
+
+    --accent: 210 50% 85%; /* Color de acento más claro */
+    --accent-foreground: 210 10% 20%; /* Texto oscuro sobre el color de acento */
+
+    --destructive: 0 100% 60%; /* Color destructivo más claro (rojo) */
+    --destructive-foreground: 210 10% 95%; /* Texto claro sobre el color destructivo */
+
+    --ring: 210 100% 60%; /* Color de anillo más claro */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: #245bff;
+
+--background: 0, 0%, 10%;
+    --foreground: 210 40% 98%;
+    --card: 0, 0%, 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0, 0%, 13%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 236 79% 62%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 5% 26%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 5% 26%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 220 5% 26%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 5% 26%;
+    --input: 220 5% 26%;
+    --ring: 236 79% 62%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.custom-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Ajusta el grosor aquí */
+}
