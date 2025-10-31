@@ -27,7 +27,7 @@ import RedisLogo from "@/components/logos/RedisLogo"
 import FirebaseLogo from "@/components/logos/FirebaseLogo"
 import { SkillsData } from "@/components/seccions/Skills";
 import { PathData } from "@/components/seccions/History";
-import { FlaskConical, Link } from "lucide-react";
+import { FlaskConical } from "lucide-react";
 
 import Biodash from "../assets/biodash.png"
 import Landing from "../assets/bet_master.png"
@@ -77,7 +77,6 @@ export const projects: Proyecto[] = [
       githubUrl: "",
       demoUrl: "https://www.fitlink.dev/"
     },
-    https://www.fitlink.dev/
     {
         name: "My personal portfolio",
         technologies: ["React", "Shadcn"],
@@ -183,7 +182,7 @@ export const historyData: PathData = {
     {
       titulo: 'Full Stack Developer: Jun 2024 -Currently',
       descripcion: 'I worked for 6 months as the sole programmer creating an app for gym management. In 3 months I was able to deliver a ready product. The experience gained allowed me to see software development from a unique perspective focused on business results. This has given me great flexibility to be able to take on any role. Although currently, with the arrival of 4 programmers to the team, I am only focused on backend development. I use fastapi as the main backend framework along with others like Pydantic, SqlModel and SqlAlchemy. I feel that this framework gives me the freedom to apply clean architecture, of which I have become passionate.',
-    },    
+    },
   ],
   formacion: {
     titulo: 'Autodidact',
